@@ -49,6 +49,16 @@ public class SightSeekerEntity extends Entity
 
 	//hitbox
 	@Override
+	protected double getHitboxWidthScale() {
+		return 0.85;
+	}
+	@Override
+	protected double getHitboxHeightScale() {
+		return 0.85;
+	}
+	
+	
+	@Override
 	protected boolean hasHealthBar() { return true; }	
 
 }

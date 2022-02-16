@@ -70,6 +70,17 @@ public class PlayerEntity extends Entity
 		}
 	}
 	
+	//hitbox
+	@Override
+	protected double getHitboxWidthScale() {
+		return 0.55;
+	}
+	@Override
+	protected double getHitboxHeightScale() {
+		return 0.85;
+	}
+	
+	
 	//utils
 	@Override
 	protected float getBaseMaxSpeed() {

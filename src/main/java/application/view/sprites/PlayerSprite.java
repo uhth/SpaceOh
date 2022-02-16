@@ -19,7 +19,6 @@ public class PlayerSprite extends Sprite
 		super( loadSprite( PLAYER_IMG_PATH ), 32, 32, 3.5, 3.5 );		
 		initAnimations();
 	}
-	
 
 	private void initAnimations() {
 		animations = new Animation[ 5 ];

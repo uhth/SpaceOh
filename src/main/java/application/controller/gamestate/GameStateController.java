@@ -117,12 +117,12 @@ public class GameStateController extends AnimationTimer
 			}
 		});
 		
-	/*	game.addEnemy( new SightSeekerEntity() {
+		game.addEnemy( new SightSeekerEntity() {
 			@Override
 			protected float getBaseHp() {
 				return 20.0f;
 			}
-		}); */
+		}); 
 	} 
 
 	//special keys

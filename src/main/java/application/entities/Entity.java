@@ -97,9 +97,19 @@ public abstract class Entity
 	protected boolean hasHealthBar() { return false; }
 
 	//hitbox
-	public void createHitbox() { this.hitbox = new Rectangle2D( getDrawCoords().getX() + getOffX(), getDrawCoords().getY() + getOffY(), getHitboxWidth(), getHitBoxHeight() ); }
-	protected double getOffX() { return 0; }	
-	protected double getOffY() { return 0; }
+	public void createHitbox() { this.hitbox = new Rectangle2D( getDrawCoords().getX() + getOffX(), getDrawCoords().getY() + getOffY(), getHitboxWidth() * getHitboxWidthScale(), getHitBoxHeight() * getHitboxHeightScale() ); }
+	protected double getOffX() {
+		double x = sprite.getWidth() * getHitboxWidthScale();
+		double diff = sprite.getWidth() - x;
+		diff /= 2;
+		return diff;
+	}	
+	protected double getOffY() {
+		double x = sprite.getHeight() * getHitboxHeightScale();
+		double diff = sprite.getHeight() - x;
+		diff /= 2;
+		return diff;
+	}
 	protected double getHitBoxHeight() { return sprite.getHeight(); }
 	protected double getHitboxWidth() { return sprite.getWidth(); }
 	protected double getHitboxWidthScale() { return 1.0; }

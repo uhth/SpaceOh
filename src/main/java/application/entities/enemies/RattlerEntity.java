@@ -37,6 +37,16 @@ public class RattlerEntity extends Entity
 	
 	//hitbox
 	@Override
+	protected double getHitboxWidthScale() {
+		return 0.85;
+	}
+	@Override
+	protected double getHitboxHeightScale() {
+		return 0.6;
+	}
+	
+	
+	@Override
 	protected boolean hasHealthBar() { return true; }	
 	
 	
