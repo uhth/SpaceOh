@@ -16,7 +16,7 @@ public class HeartSprite extends Sprite
 	}
 	
 	private HeartSprite() {		
-		super( loadSprite( HEART_IMG_PATH ), 32, 32, 1.0, 1.0 );
+		super( loadSprite( HEART_IMG_PATH ), 32, 32, 2.0, 2.0 );
 		initAnimations();
 	}
 	

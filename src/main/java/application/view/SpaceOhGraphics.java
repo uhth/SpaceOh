@@ -58,9 +58,12 @@ public class SpaceOhGraphics extends StackPane
 	public void drawProjectiles( List< Entity > projectiles ) 
 	{
 		if( projectiles.isEmpty() ) return;
-		for( Entity projectileEntity : projectiles ) 
-		{
+		for( Entity projectileEntity : projectiles )  {
+			
+			canvas.getGraphicsContext2D().fillRect( projectileEntity.getHitbox().getMinX(), projectileEntity.getHitbox().getMinY(), projectileEntity.getHitbox().getWidth(), projectileEntity.getHitbox().getHeight() );
+
 			canvas.getGraphicsContext2D().drawImage( projectileEntity.getFrame(), projectileEntity.getDrawCoords().getX(), projectileEntity.getDrawCoords().getY() );
+						
 			//hitbox stuff
 			onScreenEntities.add( projectileEntity );
 		}
@@ -84,7 +87,7 @@ public class SpaceOhGraphics extends StackPane
 		//	hit box testing stuff
 		//	canvas.getGraphicsContext2D().setFill( Color.WHITE );
 		//	canvas.getGraphicsContext2D().setGlobalBlendMode( BlendMode.EXCLUSION );
-		//	canvas.getGraphicsContext2D().fillRect( enemyEntity.getHitbox().getMinX(), enemyEntity.getHitbox().getMinY(), enemyEntity.getHitbox().getWidth(), enemyEntity.getHitbox().getHeight() );
+			canvas.getGraphicsContext2D().fillRect( enemyEntity.getHitbox().getMinX(), enemyEntity.getHitbox().getMinY(), enemyEntity.getHitbox().getWidth(), enemyEntity.getHitbox().getHeight() );
 			//draws healthbar
 			if( enemyEntity.drawHealthBar() )
 				canvas.getGraphicsContext2D().drawImage( enemyEntity.getHealthBar().getFrame(), enemyEntity.getHealthBar().getDrawCoords().getX(), enemyEntity.getHealthBar().getDrawCoords().getY() );
@@ -96,9 +99,13 @@ public class SpaceOhGraphics extends StackPane
 	//DRAW PLAYER
 	public void drawPlayer( PlayerEntity playerEntity, Image frame ) 
 	{
+		canvas.getGraphicsContext2D().fillRect( playerEntity.getHitbox().getMinX(), playerEntity.getHitbox().getMinY(), playerEntity.getHitbox().getWidth(), playerEntity.getHitbox().getHeight() );
 		canvas.getGraphicsContext2D().drawImage( frame, playerEntity.getDrawCoords().getX(), playerEntity.getDrawCoords().getY() );
+		//lines below are used to see player's emitter dots and hitbox
 	//	canvas.getGraphicsContext2D().fillRect( playerEntity.getEmitter().getPoint().getX(), playerEntity.getEmitter().getPoint().getY(), 2, 2 );
 	//	canvas.getGraphicsContext2D().fillRect( playerEntity.getEmitter().getPivot().getX(), playerEntity.getEmitter().getPivot().getY(), 2, 2 );
+		
+		
 		//hud hearts
 		for( Entity e : playerEntity.getHearts() ) 
 			canvas.getGraphicsContext2D().drawImage( e.getFrame(), e.getDrawCoords().getX(), e.getDrawCoords().getY() );

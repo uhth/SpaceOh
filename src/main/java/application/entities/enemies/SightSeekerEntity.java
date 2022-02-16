@@ -49,14 +49,6 @@ public class SightSeekerEntity extends Entity
 
 	//hitbox
 	@Override
-	protected float getHitboxWidth() { return 46; }
-	@Override
-	protected float getHitBoxHeight() { return 46; }
-	@Override
-	protected float getOffX() { return 24; }
-	@Override
-	protected float getOffY() { return 24; }
-	@Override
 	protected boolean hasHealthBar() { return true; }	
 
 }

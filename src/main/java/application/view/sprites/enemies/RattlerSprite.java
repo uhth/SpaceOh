@@ -17,7 +17,7 @@ public class RattlerSprite extends Sprite
 	}
 	
 	private RattlerSprite() {
-		super( loadSprite( RATTLER_IMG_PATH ), 32, 32, 2.0, 2.0 );
+		super( loadSprite( RATTLER_IMG_PATH ), 32, 32, 3.0, 3.0 );
 		initAnimations();
 	}
 	

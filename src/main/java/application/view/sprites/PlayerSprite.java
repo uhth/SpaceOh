@@ -16,10 +16,7 @@ public class PlayerSprite extends Sprite
 	}
 	
 	private PlayerSprite() {		
-		super( loadSprite( PLAYER_IMG_PATH ), 32, 32, 2.0, 2.0 );
-		
-		System.out.println( getSpriteArray().length );
-		
+		super( loadSprite( PLAYER_IMG_PATH ), 32, 32, 3.5, 3.5 );		
 		initAnimations();
 	}
 	

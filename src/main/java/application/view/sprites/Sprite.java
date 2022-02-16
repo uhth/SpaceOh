@@ -72,7 +72,7 @@ public abstract class Sprite {
 	private Image resizedSpritesheet( BufferedImage bufferedSpriteSheet ) {
 		ResampleOp rs = new ResampleOp( ( int ) ( bufferedSpriteSheet.getWidth() * xScale ),
 												( int ) ( bufferedSpriteSheet.getHeight() * yScale ),
-												ResampleOp.FILTER_LANCZOS );
+												ResampleOp.FILTER_BOX );
 		return SwingFXUtils.toFXImage( rs.filter( bufferedSpriteSheet, null ), null );
 	}
 	

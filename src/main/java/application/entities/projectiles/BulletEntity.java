@@ -30,14 +30,6 @@ public class BulletEntity extends Entity
 	public Animation getBulletFlyAnimation() { return animations[ 1 ]; }
 		
 	//hitbox
-	@Override
-	protected float getOffX() {	return 24; }
-	@Override
-	protected float getOffY() {	return 24; }
-	@Override
-	protected float getHitboxWidth() { return 16; }
-	@Override
-	protected float getHitBoxHeight() {	return 16; }
 
 	public Entity getSource() { return source; }
 	public void setSource(Entity source) { this.source = source; }

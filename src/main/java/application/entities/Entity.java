@@ -98,10 +98,12 @@ public abstract class Entity
 
 	//hitbox
 	public void createHitbox() { this.hitbox = new Rectangle2D( getDrawCoords().getX() + getOffX(), getDrawCoords().getY() + getOffY(), getHitboxWidth(), getHitBoxHeight() ); }
-	protected float getOffX() { return 0; }	
-	protected float getOffY() { return 0; }
-	protected float getHitBoxHeight() { return 0; }
-	protected float getHitboxWidth() { return 0; }
+	protected double getOffX() { return 0; }	
+	protected double getOffY() { return 0; }
+	protected double getHitBoxHeight() { return sprite.getHeight(); }
+	protected double getHitboxWidth() { return sprite.getWidth(); }
+	protected double getHitboxWidthScale() { return 1.0; }
+	protected double getHitboxHeightScale() { return 1.0; }
 	public Rectangle2D getHitbox() { return hitbox; }	
 	public void setHitbox( Rectangle2D hitbox ) { this.hitbox = hitbox; }
 	

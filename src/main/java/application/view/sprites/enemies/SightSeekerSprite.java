@@ -16,7 +16,7 @@ public class SightSeekerSprite extends Sprite {
 	}
 	
 	private SightSeekerSprite() {
-		super( loadSprite( SIGHT_SEEKER_IMG_PATH ), 32, 32, 2.0, 2.0 );
+		super( loadSprite( SIGHT_SEEKER_IMG_PATH ), 32, 32, 3.0, 3.0 );
 		animations = new Animation[ 1 ];
 		initAnimations();
 	}

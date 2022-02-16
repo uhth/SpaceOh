@@ -122,8 +122,8 @@ public class GameStateController extends AnimationTimer
 			protected float getBaseHp() {
 				return 20.0f;
 			}
-		});
-	*/}
+		}); */
+	} 
 
 	//special keys
 	private boolean checkForSpecialKeys( KeyEvent event ) {

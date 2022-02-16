@@ -23,7 +23,7 @@ public class PlayerEntity extends Entity
 		this.pInstance = this;
 		setPos( PlayerSettings.STARTING_X, PlayerSettings.STARTING_Y );
 		this.hearts = new ArrayList< HeartEntity >();
-		this.emitter = new PlayerEmitter( new Vector2D( this.pos.getX(), this.pos.getY() - 45 ), this );
+		this.emitter = new PlayerEmitter( new Vector2D( this.pos.getX(), this.pos.getY() - 60 ), this );
 		genSupplier();
 		updateHearts();
 		
@@ -58,15 +58,6 @@ public class PlayerEntity extends Entity
 	public Animation getPlayerStrafeRightAnimationLoop() { return animations[ 3 ]; }
 	public Animation getPlayerStrafeLeftAnimationLoop() { return animations[ 4 ]; }
 	
-	//hitbox
-	@Override
-	protected float getHitboxWidth() { return (float) ( 15 * PlayerSprite.getInstance().getWidth() ); }
-	@Override
-	protected float getHitBoxHeight() { return (float) ( 20 * PlayerSprite.getInstance().getHeight() ); }
-	@Override
-	protected float getOffX() {	return 32; }
-	@Override
-	protected float getOffY() {	return 6; }
 	
 	public void updateEmitter( boolean x, boolean y ) {
 		if( x ) {

@@ -37,14 +37,6 @@ public class RattlerEntity extends Entity
 	
 	//hitbox
 	@Override
-	protected float getHitboxWidth() { return 80; }
-	@Override
-	protected float getHitBoxHeight() { return 50; }
-	@Override
-	protected float getOffX() { return 8; }
-	@Override
-	protected float getOffY() { return 20; }
-	@Override
 	protected boolean hasHealthBar() { return true; }	
 	
 	
