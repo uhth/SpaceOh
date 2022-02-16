@@ -1,7 +1,6 @@
 package application.view.sprites;
 
 import application.view.animations.Animation;
-import javafx.scene.image.Image;
 
 public class PlayerSprite extends Sprite
 {
@@ -17,7 +16,10 @@ public class PlayerSprite extends Sprite
 	}
 	
 	private PlayerSprite() {		
-		init();
+		super( loadSprite( PLAYER_IMG_PATH ), 32, 32, 2.0, 2.0 );
+		
+		System.out.println( getSpriteArray().length );
+		
 		initAnimations();
 	}
 	
@@ -30,16 +32,6 @@ public class PlayerSprite extends Sprite
 		animations[ 3 ] = Animation.createAnimation( 3, getSpriteArray(), 6, 5 );
 		animations[ 4 ] = Animation.createAnimation( 3, getSpriteArray(), 16, 5 );
 	}
-
-	private void init() {
-		Image playerSpriteSheet = new Image( getClass().getResourceAsStream( PLAYER_IMG_PATH ) );
-		loadSprites( playerSpriteSheet );
-	}
 		
-	@Override
-	public float getScaledX() { return 3; }
-	
-	@Override
-	public float getScaledY() { return 3; }
 
 }

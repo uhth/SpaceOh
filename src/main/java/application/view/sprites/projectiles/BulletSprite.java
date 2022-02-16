@@ -2,7 +2,6 @@ package application.view.sprites.projectiles;
 
 import application.view.animations.Animation;
 import application.view.sprites.Sprite;
-import javafx.scene.image.Image;
 
 public class BulletSprite extends Sprite
 {
@@ -17,7 +16,7 @@ public class BulletSprite extends Sprite
 	}
 	
 	private BulletSprite() {
-		init();
+		super( loadSprite( BULLET_IMAGE_PATH ), 32, 32, 2.0, 2.0 );
 		initAnimations();
 	}
 	
@@ -27,20 +26,7 @@ public class BulletSprite extends Sprite
 		animations[ 1 ] = Animation.createAnimation( 4, getSpriteArray(), 6, 8 );
 	}
 	
-	private void init() {
-		Image playerSpriteSheet = new Image( getClass().getResourceAsStream( BULLET_IMAGE_PATH ) );
-		loadSprites( playerSpriteSheet );
-	}
 	
-	@Override
-	protected float getScaledX() {
-		return 2;
-	}
-	
-	@Override
-	protected float getScaledY() {
-		return 2;
-	}
 	
 
 }

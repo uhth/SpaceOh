@@ -1,7 +1,5 @@
 package application.view.sprites;
 
-import javafx.scene.image.Image;
-
 public class HealthBarSprite extends Sprite
 {
 	
@@ -16,18 +14,10 @@ public class HealthBarSprite extends Sprite
 	}
 	
 	private HealthBarSprite() {		
-		init();
+		super( loadSprite( HEALTH_BAR_IMG_PATH ), 32, 32, 1.0, 1.0 );
 	}
 	
-
-	private void init() {
-		Image healthBarSpriteSheet = new Image( getClass().getResourceAsStream( HEALTH_BAR_IMG_PATH ) );
-		loadSprites( healthBarSpriteSheet );
-	}
 	
-	@Override
-	protected float getScaledX() {
-		return 2;
-	}
+	
 	
 }

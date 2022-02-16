@@ -2,7 +2,6 @@ package application.view.sprites.hud;
 
 import application.view.animations.Animation;
 import application.view.sprites.Sprite;
-import javafx.scene.image.Image;
 
 public class HeartSprite extends Sprite
 {
@@ -17,7 +16,7 @@ public class HeartSprite extends Sprite
 	}
 	
 	private HeartSprite() {		
-		init();
+		super( loadSprite( HEART_IMG_PATH ), 32, 32, 1.0, 1.0 );
 		initAnimations();
 	}
 	
@@ -29,10 +28,6 @@ public class HeartSprite extends Sprite
 		animations[ 2 ] = Animation.createAnimation( 4, getSpriteArray(), 1, 7 );
 	}
 
-	private void init() {
-		Image heartSpriteSheet = new Image( getClass().getResourceAsStream( HEART_IMG_PATH ) );
-		loadSprites( heartSpriteSheet );
-	}
 	
 	
 }

@@ -60,9 +60,9 @@ public class PlayerEntity extends Entity
 	
 	//hitbox
 	@Override
-	protected float getHitboxWidth() { return 15 * PlayerSprite.getInstance().getScaledX(); }
+	protected float getHitboxWidth() { return (float) ( 15 * PlayerSprite.getInstance().getWidth() ); }
 	@Override
-	protected float getHitBoxHeight() { return 20 * PlayerSprite.getInstance().getScaledX(); }
+	protected float getHitBoxHeight() { return (float) ( 20 * PlayerSprite.getInstance().getHeight() ); }
 	@Override
 	protected float getOffX() {	return 32; }
 	@Override

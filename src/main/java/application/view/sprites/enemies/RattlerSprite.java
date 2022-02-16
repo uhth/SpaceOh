@@ -2,7 +2,6 @@ package application.view.sprites.enemies;
 
 import application.view.animations.Animation;
 import application.view.sprites.Sprite;
-import javafx.scene.image.Image;
 
 public class RattlerSprite extends Sprite
 {
@@ -18,14 +17,10 @@ public class RattlerSprite extends Sprite
 	}
 	
 	private RattlerSprite() {
-		init();
+		super( loadSprite( RATTLER_IMG_PATH ), 32, 32, 2.0, 2.0 );
 		initAnimations();
 	}
 	
-	private void init() {
-		Image rattlerSpriteSheet = new Image( getClass().getResourceAsStream( RATTLER_IMG_PATH ) );
-		loadSprites( rattlerSpriteSheet );
-	}
 	
 	private void initAnimations() {
 		animations = new Animation[ 3 ];
@@ -34,14 +29,5 @@ public class RattlerSprite extends Sprite
 		animations[ 2 ] = Animation.createAnimation( 7, getSpriteArray(), 10, 7 );
 	}
 	
-	@Override
-	protected float getScaledX() {
-		return 3;
-	}
-	
-	@Override
-	protected float getScaledY() {
-		return 3;
-	}
 	
 }

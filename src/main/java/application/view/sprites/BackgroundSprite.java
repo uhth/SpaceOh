@@ -2,7 +2,6 @@ package application.view.sprites;
 
 import application.settings.Settings;
 import application.view.animations.Animation;
-import javafx.scene.image.Image;
 
 public class BackgroundSprite extends Sprite
 {
@@ -19,22 +18,8 @@ public class BackgroundSprite extends Sprite
 	public Animation bgAnimation;
 	
 	private BackgroundSprite() {
-		init();
+		super( loadSprite( BACKGROUND_IMG_PATH ), Settings.WINDOW_SIZE_W, Settings.WINDOW_SIZE_H, 1.0, 1.0 );
 	}
 	
-	private void init() {
-		Image backgroundSpriteSheet = new Image( getClass().getResourceAsStream( BACKGROUND_IMG_PATH ) );
-		loadSprites( backgroundSpriteSheet );
-	}
-	
-	@Override
-	protected float getSWidth() {
-		return Settings.WINDOW_SIZE_W;
-	}
-	
-	@Override
-	protected float getSHeight() {
-		return Settings.WINDOW_SIZE_H;	
-	}
 		
 }
